@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <error-page>
+    <exception-type>tut.ac.za.LabOccupiedException</exception-type>
+    <location>/lab_error.jsp</location>
+</error-page>
+<error-page>
+    <exception-type>javax.ejb.EJBException</exception-type>
+    <location>/invalid_staff_no.jsp</location>
+</error-page>
+<error-page>
+    <exception-type>tut.ac.za.InvalidCredentialsException</exception-type>
+    <location>/invalid_credentials.jsp</location>
+</error-page>
+</web-app>

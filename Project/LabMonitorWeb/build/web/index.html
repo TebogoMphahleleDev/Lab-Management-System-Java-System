@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Access Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;     /* Dark blue */
+            --secondary: #3498db;   /* Active blue */
+            --accent: #e74c3c;      /* Alert red */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f5f6fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .dashboard {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .role-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .role-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .role-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .activity-status {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-laptop-house"></i> Computer Lab Access System</h1>
+    </header>
+
+    <main class="dashboard">
+        <div class="role-grid">
+            <!-- Academic Staff Access -->
+            <a href="staff.jsp" class="role-card">
+                <i class="fas fa-chalkboard-user role-icon"></i>
+                <h2>Academic Staff</h2>
+                <div class="activity-status">
+                    <p><i class="fas fa-sign-in-alt"></i> Sign-in/out Portal</p>
+                    <small>For tutors and lecturers</small>
+                </div>
+            </a>
+
+            <!-- Security Monitoring -->
+            <a href="security.jsp" class="role-card">
+                <i class="fas fa-video role-icon"></i>
+                <h2>Security Monitoring</h2>
+                <div class="activity-status">
+                    <p><i class="fas fa-user-clock"></i> Live Access Logs</p>
+                    <small>Real-time sign-in tracking</small>
+                </div>
+            </a>
+
+            <!-- System Admin -->
+            <a href="admin.jsp" class="role-card">
+                <i class="fas fa-tools role-icon"></i>
+                <h2>System Administration</h2>
+                <div class="activity-status">
+                    <p><i class="fas fa-cog"></i> Configuration Controls</p>
+                    <small>User management and settings</small>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Lab Access System • © <span id="currentYear"></span> All rights reserved</p>
+    </footer>
+
+    <script>
+        // Auto-updating copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
