@@ -31,7 +31,7 @@ We built this out of curiosity, passion, and the desire to solve a real problem 
 
 ## 📂 How to Run the Project
 1. Clone the repository
-2. Import it into an IDE that supports Java EE (e.g., Eclipse, IntelliJ)
+2. Import it into an IDE that supports Java EE (e.g.,Netbeans, Eclipse, IntelliJ)
 3. Set up a MySQL database using the provided schema
 4. Configure the server (Apache Tomcat recommended)
 5. Deploy and run
