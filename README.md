@@ -7,7 +7,7 @@ At university, we used to sign into the computer lab using pen and paper. This p
 - **Backend:** Java EE (Servlets, JSP, EJBs)
 - **Frontend:** JSP (Java Server Pages)
 - **Database:** MySQL
-- **Web Server:** Apache Tomcat
+- **Web Server:** Glassfish
 
 ## 🚀 Features
 - Digital sign-in for lab users
